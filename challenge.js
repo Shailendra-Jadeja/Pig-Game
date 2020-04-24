@@ -74,12 +74,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
 
         //3. Update the round score if the number was not 1
-        if (dice1 === 6 && lastDice === 6 && dice2===6) {
-            scores[activePlayer] = 0;
-            document.querySelector('#score-' + activePlayer).textContent = '0';
-            nextPlayer();
-
-        } else if (dice1 !== 1 && dice2 !== 6) {
+        if (dice1 !== 1 && dice2 !== 1) {
             //Add score
             roundScore += dice1 + dice2;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
@@ -88,8 +83,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             //Next player
             nextPlayer();
         }
-
-        lastDice = dice1;
     }
 });
 
