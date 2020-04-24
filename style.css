@@ -45,8 +45,64 @@ body {
     padding: 100px;
 }
 
+.modal {
+    display:none;
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow:auto;
+    background-color: rgba(0,0,0,0.5);
+}
 
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration:0.7s;
+}
 
+.modal-header h2, .modal-footer h3{
+    margin:0;
+}
+
+.modal-header{
+    background:#ccc;
+    padding: 15px;
+    color:black;
+}
+
+.modal-body{
+    padding: 10px 20px;
+}
+
+.modal-footer{
+    background:#ccc;
+    padding:10px;
+    color:black;
+    text-align:center;
+}
+
+@keyframes modalopen{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+.closeBtn{
+    color:#fff;
+    float:right;
+    font-size:30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color:red;
+    text-decoration:none;
+    cursor:pointer;
+}
 /**********************************************
 *** PLAYERS
 **********************************************/
@@ -137,7 +193,8 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-rules{ top: 25px; }
+.btn-new { top: 85px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 

@@ -9,6 +9,49 @@ GAME RULES:
 
 */
 
+//Modal Javscript starts
+
+//Get modal element
+var modal = document.getElementById('simpleModal');
+
+//Get open modal button
+var modalBtn = document.querySelector('.btn-rules');
+
+//Get close button
+var closeBtn = document.querySelector('.closeBtn');
+
+//Function to open modal
+
+modalBtn.addEventListener('click', function () {
+    modal.style.display = 'block';
+});
+
+//Function to close modal
+
+closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+//Function to close modal if clicked outside modal
+
+window.addEventListener('click', function (e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+document.addEventListener('keyup', function (e) {
+    if (e.keyCode === 27 || e.which === 27) {
+        modal.style.display = 'none';
+    }
+})
+
+//Function to hide scroll bar from modal
+
+modal.style.overflow = 'hidden';
+
+//Modal Javascript ends
+
 var scores, roundScore, activePlayer, gamePlaying, lastDice;
 
 init();

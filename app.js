@@ -9,6 +9,10 @@ GAME RULES:
 
 */
 
+
+
+//Modal Javscript ends
+
 var scores, roundScore, activePlayer, gamePlaying;
 
 init();
